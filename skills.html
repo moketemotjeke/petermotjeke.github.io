@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mokete Peter Motjeke | Certifications</title>
+
+<style>
+:root {
+    --primary: #00d4ff;
+    --dark: #0f172a;
+    --card-bg: #1e293b;
+    --text: #f8fafc;
+    --muted: #94a3b8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: var(--dark);
+    color: var(--text);
+}
+
+header {
+    background: rgba(15, 23, 42, 0.95);
+    padding: 1.5rem 5%;
+    border-bottom: 1px solid #334155;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    margin-left: 25px;
+}
+nav a:hover { color: var(--primary); }
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 4rem 0;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-title h1 {
+    font-size: 2.6rem;
+}
+
+.page-title p {
+    color: var(--muted);
+    margin-top: 10px;
+}
+
+.filter {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.filter button {
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: 1px solid #334155;
+    background: transparent;
+    color: var(--text);
+    cursor: pointer;
+}
+
+.filter button:hover,
+.filter button.active {
+    background: var(--primary);
+    color: #000;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+}
+
+.cert-card {
+    background: var(--card-bg);
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: transform .3s, box-shadow .3s;
+    cursor: pointer;
+}
+
+.cert-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0,212,255,.25);
+}
+
+.cert-icon {
+    font-size: 2.8rem;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.cert-card h3 {
+    margin-bottom: 6px;
+}
+
+.cert-card span {
+    font-size: .9rem;
+    color: var(--muted);
+}
+
+.cert-tag {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: .75rem;
+    border: 1px solid rgba(0,212,255,.4);
+    color: var(--primary);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(2,6,23,.95);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    height: 90%;
+}
+
+.modal iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    background: #fff;
+}
+
+#imgViewer {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.footer {
+    text-align: center;
+    padding: 2.5rem;
+    background: #020617;
+    border-top: 1px solid #334155;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>M.P. MOTJEKE</h2>
+    <nav>
+        <a href="index.html">Portfolio</a>
+        <a href="cv.html">CV</a>
+        <a href="mailto:moketemotjeke@gmail.com">Contact</a>
+    </nav>
+</header>
+
+<div class="container">
+
+<div class="page-title">
+    <h1>Certifications</h1>
+    <p>Professional and academic certifications in IT, networking, security and systems.</p>
+</div>
+
+<div class="filter">
+    <button class="active" onclick="filterCerts('all', event)">All</button>
+    <button onclick="filterCerts('networking', event)">IT and Networking</button>
+    <button onclick="filterCerts('security', event)">Security</button>
+    <button onclick="filterCerts('voip', event)">VOIP</button>
+    <button onclick="filterCerts('print', event)">Printing</button>
+    <button onclick="filterCerts('academic', event)">Academic</button>
+</div>
+
+<div class="cert-grid">
+
+<!-- VOIP (PNG ONLY) -->
+<div class="cert-card voip" onclick="openImage('Voip/YCCA_CCA38240301477_545.png')">
+    <div class="cert-icon">📞</div>
+    <h3>YCCA</h3><p>click to open</p>
+    <span>Yeastar Academy</span>
+    <div class="cert-tag">VOIP</div>
+</div>
+<div class="cert-card voip" onclick="openImage('Voip/YSCIS_IS38230200655.jpg')">
+    <div class="cert-icon">📞</div>
+    <h3>YSCIS</h3><p>click to open</p>
+    <span>Yeastar Academy</span>
+    <div class="cert-tag">VOIP</div>
+</div>
+<div class="cert-card voip" onclick="openImage('Voip/YSCIS_IS38240300666_996.png')">
+    <div class="cert-icon">📞</div>
+    <h3>YSCIS</h3><p>click to open</p>
+    <span>Yeastar Academy</span>
+    <div class="cert-tag">VOIP</div>
+</div>
+<div class="cert-card voip" onclick="openImage('Voip/YSCRS_RS38240301255_689.png')">
+    <div class="cert-icon">📞</div>
+    <h3>YSCRS</h3><p>click to open</p>
+    <span>Yeastar Academy</span>
+    <div class="cert-tag">VOIP</div>
+</div>
+<div class="cert-card voip" onclick="openImage('Voip/YSCSS_SS38240400366_431.png')">
+    <div class="cert-icon">📞</div>
+    <h3>YSCSS</h3><p>click to open</p>
+    <span>Yeastar Academy</span>
+    <div class="cert-tag">VOIP</div>
+</div>
+<div class="cert-card voip" onclick="openImage('Voip/YSCT_CT37230200767.jpg')">
+    <div class="cert-icon">📞</div>
+    <h3>YSCT</h3><p>click to open</p>
+    <span>Yeastar Academy</span>
+    <div class="cert-tag">VOIP</div>
+</div>
+<div class="cert-card voip" onclick="openImage('Voip/YSCT_CT38231200455_679.png')">
+    <div class="cert-icon">📞</div>
+    <h3>YSCT</h3><p>click to open</p>
+    <span>Yeastar Academy</span>
+    <div class="cert-tag">VOIP</div>
+</div>
+<div class="cert-card voip" onclick="openImage('Voip/YSCT_CT38240302266_465.png')">
+    <div class="cert-icon">📞</div>
+    <h3>YSCT</h3><p>click to open</p>
+    <span>Yeastar Academy</span>
+    <div class="cert-tag">VOIP</div>
+</div>
+
+<!-- SECURITY (PDF ONLY) -->
+<div class="cert-card networking" onclick="openPDF('Networks/Network_Addressing_and_Basic_Troubleshooting_Badge20230814-28-joiu1d.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>Network Addressing and Basic Troubleshooting</h3><p>click to open</p>
+    <span>Cisco Networking Academy</span>
+    <div class="cert-tag">Networking</div>
+</div>
+<div class="cert-card networking" onclick="openPDF('Networks/Network_Support_and_Security_Badge20230808-28-ned89p.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>Network Support and Security</h3><p>click to open</p>
+    <span>Cisco Networking Academy</span>
+    <div class="cert-tag">Networking</div>
+</div>
+<div class="cert-card networking" onclick="openPDF('Networks/Network_Technician_Career_Path_Badge20230808-28-fy3inn.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>Network Technician Career Path</h3><p>click to open</p>
+    <span>Cisco Networking Academy</span>
+    <div class="cert-tag">Networking</div>
+</div>
+<div class="cert-card networking" onclick="openPDF('IT2/CCNA_R-S-_Introduction_to_Networks_certificate_moketemotjeke-gmail-com_b70928d1-34bf-458a-a6ae-534fa73e4c51.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>CCNA R&S-Introduction to Networks</h3><p>click to open</p>
+    <span>Cisco Networking Academy</span>
+    <div class="cert-tag">Networking</div>
+</div>
+<div class="cert-card networking" onclick="openPDF('IT2/CertificateofAttendance.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>Network Essentials</h3><p>click to open</p>
+    <span>Cisco Networking Academy</span>
+    <div class="cert-tag">Networking</div>
+</div>
+<div class="cert-card networking" onclick="openPDF('IT2/GetConnected.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>Get Connected</h3><p>click to open</p>
+    <span>Cisco Networking Academy</span>
+    <div class="cert-tag">Networking</div>
+</div>
+<div class="cert-card networking" onclick="openPDF('IT2/introtoNetwork.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>Intro to Networks</h3><p>click to open</p>
+    <span>Cisco Networking Academy</span>
+    <div class="cert-tag">Networking</div>
+</div>
+<div class="cert-card networking" onclick="openPDF('IT2/Microsoft365Essential.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>Microsoft 365 Essential</h3><p>click to open</p>
+    <span>Cisco Networking Academy</span>
+    <div class="cert-tag">Information and technology</div>
+</div>
+<div class="cert-card networking" onclick="openPDF('IT2/MicrosoftGroupEssentials.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>Microsoft Group Essentials</h3><p>click to open</p>
+    <span>Cisco Networking Academy</span>
+    <div class="cert-tag">Information and technology</div>
+</div>
+<div class="cert-card networking" onclick="openPDF('IT2/RoutingndSwitching.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>Routing and Switching</h3><p>click to open</p>
+    <span>Cisco Networking Academy</span>
+    <div class="cert-tag">Networking</div>
+</div>
+
+<div class="cert-card networking" onclick="openPDF('IT2/IT_Essentials_certificate_moketemotjeke-gmail-com_34c1e7e2-dfdb-482d-9cc3-8578236c2ceb.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>IT Essentials</h3><p>click to open</p>
+    <span>Cisco Networking Academy</span>
+    <div class="cert-tag">Networking</div>
+</div>
+<div class="cert-card networking" onclick="openPDF('IT2/MasteringMicrosoft365.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>Mastering Microsoft 365</h3><p>click to open</p>
+    <span>Nashua Training</span>
+    <div class="cert-tag">Information Technology</div>
+</div>
+<div class="cert-card networking" onclick="openPDF('IT2/MasteringMicrosoft365.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>Mastering Microsoft 365</h3><p>click to open</p>
+    <span>Nashua Training</span>
+    <div class="cert-tag">Information Technology</div>
+</div>
+<div class="cert-card networking" onclick="openPDF('IT2/MasteringMicrosoft365.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>Mastering Microsoft 365</h3><p>click to open</p>
+    <span>Nashua Training</span>
+    <div class="cert-tag">Information Technology</div>
+</div>
+<div class="cert-card networking" onclick="openPDF('IT2/MasteringMicrosoft365.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>Mastering Microsoft 365</h3><p>click to open</p>
+    <span>Nashua Training</span>
+    <div class="cert-tag">Information Technology</div>
+</div>
+<div class="cert-card networking" onclick="openPDF('IT2/MasteringMicrosoft365.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>Mastering Microsoft 365</h3><p>click to open</p>
+    <span>Nashua Training</span>
+    <div class="cert-tag">Information Technology</div>
+</div>
+<div class="cert-card networking" onclick="openPDF('IT2/MasteringMicrosoft365.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>Mastering Microsoft 365</h3><p>click to open</p>
+    <span>Nashua Training</span>
+    <div class="cert-tag">Information Technology</div>
+</div>
+
+<div class="cert-card networking" onclick="openPDF('Networks/Networking_Essentials_Badge20230808-28-a1exjj.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>Networking Essentials</h3><p>click to open</p>
+    <span>Cisco Networking Academy</span>
+    <div class="cert-tag">Networking</div>
+</div>
+<div class="cert-card networking" onclick="openPDF('Networks/Networking_Basics_Badge20230803-28-z4zh0n.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>Networking Basics</h3><p>click to open</p>
+    <span>Cisco Networking Academy</span>
+    <div class="cert-tag">Networking</div>
+</div>
+<div class="cert-card networking" onclick="openPDF('IT2/Networking_Devices_and_Initial_Configuration_Badge20230803-28-pu33x0.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>Microsoft 365 Essential Training for Administrators</h3><p>click to open</p>
+    <span>Nashua Training</span>
+    <div class="cert-tag">Information Technology</div>
+</div>
+<div class="cert-card networking" onclick="openPDF('IT/MD-102Exploreendpointmanagement.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>MD-102 Explore Endpoint Management</h3><p>click to open</p>
+    <span>Cisco Networking Academy</span>
+    <div class="cert-tag">Networking</div>
+</div>
+<div class="cert-card networking" onclick="openPDF('IT2/Microsoft.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>Microsoft admin</h3><p>click to open</p>
+    <span>Nashua Training</span>
+    <div class="cert-tag">Information Technology</div>
+</div>
+<div class="cert-card networking" onclick="openPDF('IT/222.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>Microsoft Azure Fundamentals: Describe cloud</h3><p>click to open</p>
+    <span>Linkedin Academy</span>
+    <div class="cert-tag">Information Technology</div>
+</div>
+<div class="cert-card networking" onclick="openPDF('IT/333.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>MS-900 Microsoft 365 Fundamentals: Describe Microsoft 365 apps and services</h3><p>click to open</p>
+    <span>Linkedin Academy</span>
+    <div class="cert-tag">Information Technology</div>
+</div>
+<div class="cert-card networking" onclick="openPDF('IT/ttt.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>Linkedin Transcript</h3><p>click to open</p>
+    <span>Linkedin Academy Transcript</span>
+    <div class="cert-tag">Networking</div>
+</div>
+<div class="cert-card academic" onclick="openPDF('IT/vutcert.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>National Diploma in IT</h3><p>click to open</p>
+    <span>Vaal University of Technology</span>
+    <div class="cert-tag">Academic</div>
+</div>
+<div class="cert-card academic" onclick="openPDF('IT/NCV.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>NCV Office Admin</h3><p>click to open</p>
+    <span>Vaal University of Technology</span>
+    <div class="cert-tag">Academic</div>
+</div>
+<div class="cert-card security" onclick="openPDF('Hikvision/CGSA-ACCESSCONTROL.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>CGSA-ACCESS CONTROL</h3><p>click to open</p>
+    <span>Hikvision</span>
+    <div class="cert-tag">Security</div>
+</div>
+<div class="cert-card security" onclick="openPDF('Hikvision/CGSP-CCTV.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>CGSP-CCTV</h3><p>click to open</p>
+    <span>Hikvision</span>
+    <div class="cert-tag">Security</div>
+</div>
+<div class="cert-card security" onclick="openPDF('Hikvision/GCSA-CCTV.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>CGSA-CCTV</h3><p>click to open</p>
+    <span>Hikvision</span>
+    <div class="cert-tag">Security</div>
+</div>
+<div class="cert-card security" onclick="openPDF('Hikvision/HCSA-ACUSENSE.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>HCSA-ACUSENSE</h3><p>click to open</p>
+    <span>Hikvision</span>
+    <div class="cert-tag">Security</div>
+</div>
+<div class="cert-card security" onclick="openPDF('Hikvision/HCSA-ACCESSCONTROL.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>HCSA-ACCESS CONTROL</h3><p>click to open</p>
+    <span>Hikvision</span>
+    <div class="cert-tag">Security</div>
+</div>
+<div class="cert-card security" onclick="openPDF('Hikvision/HCSA-ALARM.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>HCSA-ALARM</h3><p>click to open</p>
+    <span>Hikvision</span>
+    <div class="cert-tag">Security</div>
+</div>
+<div class="cert-card security" onclick="openPDF('Hikvision/HCSA-CCTV.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>HCSA-CCTV</h3><p>click to open</p>
+    <span>Hikvision</span>
+    <div class="cert-tag">Security</div>
+</div>
+<div class="cert-card security" onclick="openPDF('Hikvision/HCSA-SOFTWARE.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>HCSA-SOFTWARE</h3><p>click to open</p>
+    <span>Hikvision</span>
+    <div class="cert-tag">Security</div>
+</div>
+<div class="cert-card security" onclick="openPDF('Hikvision/HCSA-THERMAL.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>HCSA-THERMAL</h3><p>click to open</p>
+    <span>Hikvision</span>
+    <div class="cert-tag">Security</div>
+</div>
+<div class="cert-card security" onclick="openPDF('Hikvision/HCSA-VIDEO INTERCOM.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>HCSA-VIDEO INTERCOM</h3><p>click to open</p>
+    <span>Hikvision</span>
+    <div class="cert-tag">Security</div>
+</div>
+<div class="cert-card security" onclick="openPDF('Hikvision/HCSA-ALARM.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>HCSA-ALARM</h3><p>click to open</p>
+    <span>Hikvision</span>
+    <div class="cert-tag">Security</div>
+</div>
+<div class="cert-card security" onclick="openPDF('Hikvision/HCSA-VIDEOINTERCOM.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>HCSA-VIDEO INTERCOM</h3><p>click to open</p>
+    <span>Hikvision</span>
+    <div class="cert-tag">Security</div>
+</div>
+<div class="cert-card security" onclick="openPDF('Hikvision/HCSA-VMSOPERATORS.pdf')">
+    <div class="cert-icon">📄</div>
+    <h3>HCSA-VMS OPERATORS</h3><p>click to open</p>
+    <span>Hikvision</span>
+    <div class="cert-tag">Security</div>
+</div>
+
+<!-- PRINTING (PDF ONLY) -->
+<div class="cert-card print" onclick="openPDF('Printing/ricohprintingexpect.pdf')">
+    <div class="cert-icon">🖨️</div>
+    <h3>Ricoh Printing Expect</h3><p>click to open</p>
+    <span>Ricoh Training</span>
+    <div class="cert-tag">Printing</div>
+</div>
+<div class="cert-card print" onclick="openPDF('Printing/octopus.pdf')">
+    <div class="cert-icon">🖨️</div>
+    <h3>Printer Octopus</h3><p>click to open</p>
+    <span>Ricoh Training</span>
+    <div class="cert-tag">Printing</div>
+</div>
+<div class="cert-card print" onclick="openPDF('Printing/Ricohofficeprinting.pdf')">
+    <div class="cert-icon">🖨️</div>
+    <h3>Ricoh Office Printing</h3><p>click to open</p>
+    <span>Ricoh Training</span>
+    <div class="cert-tag">Printing</div>
+</div>
+<div class="cert-card print" onclick="openPDF('Printing/connectivity cert.pdf')">
+    <div class="cert-icon">🖨️</div>
+    <h3>Connectivity</h3><p>click to open</p>
+    <span>Ricoh Training</span>
+    <div class="cert-tag">Printing</div>
+</div>
+
+<!-- ACADEMIC (PDF ONLY) -->
+
+
+</div>
+</div>
+
+<!-- PDF MODAL -->
+<div class="modal" id="pdfModal" onclick="closeModals()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <span class="close" onclick="closeModals()">&times;</span>
+        <iframe id="pdfFrame"></iframe>
+    </div>
+</div>
+
+<!-- IMAGE MODAL -->
+<div class="modal" id="imageModal" onclick="closeModals()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <span class="close" onclick="closeModals()">&times;</span>
+        <img id="imgViewer">
+    </div>
+</div>
+
+<footer class="footer">
+    <p>&copy; 2026 Mokete Peter Motjeke</p>
+</footer>
+
+<script>
+function openPDF(src) {
+    document.getElementById("pdfFrame").src = src;
+    document.getElementById("pdfModal").style.display = "flex";
+}
+
+function openImage(src) {
+    document.getElementById("imgViewer").src = src;
+    document.getElementById("imageModal").style.display = "flex";
+}
+
+function closeModals() {
+    document.getElementById("pdfModal").style.display = "none";
+    document.getElementById("imageModal").style.display = "none";
+    document.getElementById("pdfFrame").src = "";
+    document.getElementById("imgViewer").src = "";
+}
+
+function filterCerts(category, event) {
+    document.querySelectorAll('.filter button').forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
+
+    document.querySelectorAll('.cert-card').forEach(card => {
+        card.style.display =
+            category === 'all' || card.classList.contains(category)
+            ? 'block' : 'none';
+    });
+}
+</script>
+
+</body>
+</html>

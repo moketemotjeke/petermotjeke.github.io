@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mokete Peter Motjeke | CV</title>
+
+<style>
+:root {
+    --primary: #00d4ff;
+    --dark: #0f172a;
+    --card-bg: #1e293b;
+    --text: #f8fafc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--text);
+}
+
+/* HEADER */
+header {
+    background: rgba(15, 23, 42, 0.95);
+    padding: 1.5rem 5%;
+    border-bottom: 1px solid #334155;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+}
+nav a:hover { color: var(--primary); }
+
+/* LAYOUT */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 4rem 0;
+}
+
+/* CV HEADER */
+.cv-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.cv-header h1 {
+    font-size: 2.8rem;
+}
+
+.cv-header p {
+    color: #94a3b8;
+    margin-top: 5px;
+}
+
+/* SECTIONS */
+.section {
+    background: var(--card-bg);
+    border: 1px solid #334155;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.section h2 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--primary);
+    padding-left: 15px;
+}
+
+/* LISTS */
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* SKILLS GRID */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.skill {
+    background: #020617;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #334155;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 2.5rem;
+    background: #020617;
+    border-top: 1px solid #334155;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>M.P. MOTJEKE</h2>
+    <nav>
+        <a href="index.html">Portfolio</a>
+    <a href="skills.html">Certifications</a>
+        <a href="mailto:moketemotjeke@gmail.com">Contact</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <!-- CV HEADER -->
+    <div class="cv-header">
+        <div>
+            <h1>Mokete Peter Motjeke</h1>
+            <p>IT Field Technician | Network & Infrastructure Specialist</p>
+ <p>Development (No work experience) | Web Dev / Software Dev / Database Dev & Admin</p> 
+        </div>
+        <div>
+            <p>Email: moketemotjeke@gmail.com</p>
+            <p>Location: South Africa</p>
+        </div>
+    </div>
+
+    <!-- PROFILE -->
+    <div class="section">
+        <h2>Professional Profile</h2>
+        <p>
+            IT Field Technician with over 3 years of experience at Nashua, specializing in
+            network infrastructure, CCTV systems, Windows Server environments, and end-user support.
+            Strong troubleshooting skills with the ability to communicate technical solutions clearly.
+        </p>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="section">
+        <h2>Technical Skills</h2>
+        <div class="skills">
+            <div class="skill">Networking & Structured Cabling</div>
+            <div class="skill">CCTV & Surveillance Systems</div>
+            <div class="skill">Windows Server & Active Directory</div>
+            <div class="skill">Wireless Access Points</div>
+            <div class="skill">PBX / VoIP Systems</div>
+            <div class="skill">Desktop & Printer Support</div>
+            <div class="skill">Windows 10 / 11</div>
+            <div class="skill">Basic Cybersecurity</div>
+        </div>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="section">
+        <h2>Work Experience</h2>
+        <p><strong>Field Technician – Nashua</strong></p>
+        <p>2021 – Present</p>
+        <ul>
+            <li>• Installed and maintained network infrastructure and CCTV systems</li>
+ <li>• Installed and supported MitroTik Routers ,Unifi devices and knowledge of Cisco devices</li>
+            <li>• Supported Windows Server environments and Active Directory</li>
+ <li>• Familiar with security devices such as unifi UDM and other secutity devices</li>
+            <li>• Provided on-site and remote technical support</li>
+            <li>• Installed printers, access points, and PBX systems</li>
+        </ul>
+    </div>
+
+ <!-- EXPERIENCE -->
+    <div class="section">
+        <h2>Self-taught</h2>
+        <p><strong>Online tutorials - youtube videos etc</strong></p>
+        <p>2020 – Present</p>
+        <ul>
+            <li>• Microsoft Azure </li>
+ <li>• Mitrotik Routers, Switches and Access points</li>
+            <li>• Firmware update on various devices</li>
+ <li>• Radio links network</li>
+            <li>• hypervisor-Host and Guest-Isolation-Resource Managemen</li>
+            <li>• Installed printers, access points, and PBX systems</li>
+        </ul>
+    </div>
+    <!-- EDUCATION -->
+    <div class="section">
+        <h2>Education</h2>
+        <ul>
+            <li>• National Diploma in Information Technology – VUT</li>
+            <li>• NCV Office Administration</li>
+        </ul>
+    </div>
+
+    <!--References -->
+    <div class="section">
+       
+<h2>References</h2>
+        <ul>
+ <li>• Gideon ralepeli – Nashua - Gideonr@nashuanw.co.za </li>
+            <li>• Raymond Molefi – Customer Serviced - raymondm@vuselelacollege.co.za- 061 414 1275</li>
+             <li>• Ralston Erasmus – Nashua - Ralstone@nashuanw.co.za - 082 042 5012</li>
+        </ul>
+</div>
+
+<footer class="footer">
+    <p>&copy; 2025 Mokete Peter Motjeke</p>
+</footer>
+
+</body>
+</html>

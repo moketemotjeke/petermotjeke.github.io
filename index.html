@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mokete Peter Motjeke | IT Field Technician Portfolio</title>
+
+<style>
+:root {
+    --primary: #00d4ff;
+    --dark: #0f172a;
+    --card-bg: #1e293b;
+    --text: #f8fafc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--text);
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+header {
+    background: rgba(15, 23, 42, 0.95);
+    padding: 1.5rem 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #334155;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+nav a:hover { color: var(--primary); }
+
+/* HERO */
+.hero {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile-images {
+    display: flex;
+}
+
+.profile-images img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+    transition: transform 0.3s ease;
+}
+.profile-images img:first-child { margin-right: -20px; }
+.profile-images img:hover { transform: scale(1.1); }
+
+.profile-text h1 { font-size: 3.2rem; }
+.profile-text p { font-size: 1.2rem; color: #94a3b8; }
+
+/* LAYOUT */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--primary);
+}
+
+/* SKILL BLOCK */
+.skill-block {
+    margin-bottom: 5rem;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid #334155;
+}
+
+.skill-info h2 {
+    margin-bottom: 15px;
+    border-left: 4px solid var(--primary);
+    padding-left: 15px;
+}
+
+/* IMAGE GRID */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* IMAGE FIXES ONLY */
+.img-placeholder {
+    height: 180px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #020617;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.img-placeholder:hover img { transform: scale(1.15); }
+
+.img-placeholder:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 212, 255, 0.25);
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 3rem;
+    background: #020617;
+    border-top: 1px solid #334155;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>M.P. MOTJEKE</h2>
+    <nav>
+       
+        <a href="index.html">Portfolio</a>
+    <a href="cv.html">Resume</a>
+        <a href="mailto:moketemotjeke@gmail.com">Contact Me</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="profile-header">
+        <div class="profile-images">
+            <img src="images/me.jpg">
+            <img src="images/me2.jpeg">
+        </div>
+        <div class="profile-text">
+            <h1>Mokete Peter Motjeke</h1>
+            <p>IT Graduate (VUT) | 3+ Years Experience at Nashua | Infrastructure Specialist</p>
+        </div>
+    </div>
+</section>
+
+<div class="container" id="work">
+<h2 class="section-title">Field Technician Portfolio</h2>
+
+<!-- CCTV -->
+<div class="skill-block">
+<h2>CCTV Systems & Surveillance</h2>
+<div class="image-gallery">
+<div class="img-placeholder"><img src="images/cctv1.jpg"></div>
+<div class="img-placeholder"><img src="images/cctv2.jpg"></div>
+<div class="img-placeholder"><img src="images/cctv3.jpg"></div>
+<div class="img-placeholder"><img src="images/cctv4.jpg"></div>
+<div class="img-placeholder"><img src="images/cctv5.jpg"></div>
+<div class="img-placeholder"><img src="images/cctv6.jpg"></div>
+<div class="img-placeholder"><img src="images/cctv7.jpg"></div>
+<div class="img-placeholder"><img src="images/cctv8.jpg"></div>
+<div class="img-placeholder"><img src="images/cctv9.jpg"></div>
+<div class="img-placeholder"><img src="images/cctv10.jpg"></div>
+<div class="img-placeholder"><img src="images/cctv11.jpg"></div>
+<div class="img-placeholder"><img src="images/cctv12.jpg"></div>
+</div>
+</div>
+
+<!-- CABLE MANAGEMENT -->
+<div class="skill-block">
+<h2>Network Cabinets & Cable Management</h2>
+<div class="image-gallery">
+<div class="img-placeholder"><img src="images/cable1.jpg"></div>
+<div class="img-placeholder"><img src="images/cable2.jpg"></div>
+<div class="img-placeholder"><img src="images/cable3.jpg"></div>
+<div class="img-placeholder"><img src="images/cable4.jpg"></div>
+<div class="img-placeholder"><img src="images/cable5.jpg"></div>
+<div class="img-placeholder"><img src="images/cable6.jpg"></div>
+<div class="img-placeholder"><img src="images/cable7.jpg"></div>
+<div class="img-placeholder"><img src="images/cable8.jpg"></div>
+<div class="img-placeholder"><img src="images/cable9.jpg"></div>
+<div class="img-placeholder"><img src="images/cable10.jpg"></div>
+<div class="img-placeholder"><img src="images/cable11.jpg"></div>
+<div class="img-placeholder"><img src="images/cable12.jpg"></div>
+</div>
+</div>
+
+<!-- SERVERS -->
+<div class="skill-block">
+<h2>Windows Server & Virtual Machines</h2>
+<div class="image-gallery">
+<div class="img-placeholder"><img src="images/server1.jpg"></div>
+<div class="img-placeholder"><img src="images/server2.jpg"></div>
+<div class="img-placeholder"><img src="images/server3.jpg"></div>
+<div class="img-placeholder"><img src="images/server4.jpg"></div>
+<div class="img-placeholder"><img src="images/server5.jpg"></div>
+<div class="img-placeholder"><img src="images/vms1.jpg"></div>
+<div class="img-placeholder"><img src="images/vms2.jpg"></div>
+<div class="img-placeholder"><img src="images/vms3.jpg"></div>
+<div class="img-placeholder"><img src="images/vms5.jpg"></div>
+<div class="img-placeholder"><img src="images/vms6.png"></div>
+<div class="img-placeholder"><img src="images/vms7.jpg"></div>
+<div class="img-placeholder"><img src="images/vms8.jpg"></div>
+</div>
+</div>
+
+<!-- WIFI -->
+<div class="skill-block">
+<h2>Wireless Networks & Network Points</h2>
+<div class="image-gallery">
+<div class="img-placeholder"><img src="images/wifi1.jpg"></div>
+<div class="img-placeholder"><img src="images/wifi2.jpg"></div>
+<div class="img-placeholder"><img src="images/wifi3.jpg"></div>
+<div class="img-placeholder"><img src="images/wifi4.jpg"></div>
+<div class="img-placeholder"><img src="images/wifi5.jpg"></div>
+<div class="img-placeholder"><img src="images/wifi6.jpg"></div>
+<div class="img-placeholder"><img src="images/wifi7.jpg"></div>
+<div class="img-placeholder"><img src="images/wifi8.jpg"></div>
+<div class="img-placeholder"><img src="images/wifi9.jpg"></div>
+<div class="img-placeholder"><img src="images/wifi10.jpg"></div>
+<div class="img-placeholder"><img src="images/wifi11.jpg"></div>
+<div class="img-placeholder"><img src="images/wifi12.jpg"></div>
+</div>
+</div>
+
+<!-- PBX -->
+<div class="skill-block">
+<h2>Telephone Systems & Voltage Testing</h2>
+<div class="image-gallery">
+<div class="img-placeholder"><img src="images/1.png"></div>
+<div class="img-placeholder"><img src="images/2.png"></div>
+<div class="img-placeholder"><img src="images/3.png"></div>
+<div class="img-placeholder"><img src="images/4.png"></div>
+<div class="img-placeholder"><img src="images/5.png"></div>
+<div class="img-placeholder"><img src="images/6.jpg"></div>
+<div class="img-placeholder"><img src="images/7.jpg"></div>
+<div class="img-placeholder"><img src="images/8.jpeg"></div>
+<div class="img-placeholder"><img src="images/9.jpg"></div>
+<div class="img-placeholder"><img src="images/10.jpeg"></div>
+<div class="img-placeholder"><img src="images/11.jpeg"></div>
+<div class="img-placeholder"><img src="images/12.jpg"></div>
+</div>
+</div>
+
+<!-- DESKTOP -->
+<div class="skill-block">
+<h2>Printer & Windows 10/11 Installation</h2>
+<div class="image-gallery">
+<div class="img-placeholder"><img src="images/printer1.jpg"></div>
+<div class="img-placeholder"><img src="images/printer2.jpg"></div>
+<div class="img-placeholder"><img src="images/printer3.jpg"></div>
+<div class="img-placeholder"><img src="images/printer4.jpg"></div>
+<div class="img-placeholder"><img src="images/printer5.jpg"></div>
+<div class="img-placeholder"><img src="images/printer6.jpg"></div>
+<div class="img-placeholder"><img src="images/printer7.jpg"></div>
+<div class="img-placeholder"><img src="images/printer8.jpg"></div>
+</div>
+</div>
+
+</div>
+
+<footer class="footer">
+<p>&copy; 2025 Mokete Peter Motjeke | VUT IT Alumni</p>
+</footer>
+
+</body>
+</html>
